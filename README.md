@@ -12,6 +12,13 @@ insmod: can't insert 'globalmem.ko': Device or resource busy
 
 设备号的方法：`# cat /proc/devices`
 
+# 编译内核版本
+```
+#uname -a
+Linux bsp-ubuntu1804 4.15.0-117-generic #118-Ubuntu SMP Fri Sep 4 20:02:41 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
+
+```
+
 # 加载模块之后使用lsmod查看模块
 ```
 weiqifa@bsp-ubuntu1804:~/c/globalmem$ lsmod |grep global
@@ -61,6 +68,19 @@ weiqifa@bsp-ubuntu1804:~/c/globalmem$
 weiqifa@bsp-ubuntu1804:~/c/globalmem$ sudo insmod globalmem.ko globalmem_major=231
 weiqifa@bsp-ubuntu1804:~/c/globalmem$ cat /proc/devices |grep globalmem
 231 globalmem
+weiqifa@bsp-ubuntu1804:~/c/globalmem$
+
+```
+
+# 增加自动创建设备节点的驱动文件
+```
+weiqifa@bsp-ubuntu1804:~/c/globalmem$ chmod 777 globalmem.ko
+weiqifa@bsp-ubuntu1804:~/c/globalmem$ sudo insmod globalmem.ko
+[sudo] password for weiqifa:
+weiqifa@bsp-ubuntu1804:~/c/globalmem$ ls /dev/globalmem
+/dev/globalmem
+weiqifa@bsp-ubuntu1804:~/c/globalmem$ ls /dev/globalmem -al
+crw------- 1 root root 238, 0 Dec 22 17:18 /dev/globalmem
 weiqifa@bsp-ubuntu1804:~/c/globalmem$
 
 ```
