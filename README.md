@@ -55,3 +55,12 @@ str:LINUX,GDB
 weiqifa@bsp-ubuntu1804:~/c/globalmem$
 ```
 
+# 使用传入参数设置主设备号
+```
+
+weiqifa@bsp-ubuntu1804:~/c/globalmem$ sudo insmod globalmem.ko globalmem_major=231
+weiqifa@bsp-ubuntu1804:~/c/globalmem$ cat /proc/devices |grep globalmem
+231 globalmem
+weiqifa@bsp-ubuntu1804:~/c/globalmem$
+
+```
