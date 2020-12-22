@@ -83,4 +83,12 @@ weiqifa@bsp-ubuntu1804:~/c/globalmem$ ls /dev/globalmem -al
 crw------- 1 root root 238, 0 Dec 22 17:18 /dev/globalmem
 weiqifa@bsp-ubuntu1804:~/c/globalmem$
 
+/*修改权限后才可以正常进行独写操作*/
+weiqifa@bsp-ubuntu1804:~/c/globalmem$ sudo chmod 777 /dev/globalmem
+weiqifa@bsp-ubuntu1804:~/c/globalmem$ gcc app-main.c && ./a.out
+write data ok!
+str:LINUX,GDB
+weiqifa@bsp-ubuntu1804:~/c/globalmem$
+
+
 ```
