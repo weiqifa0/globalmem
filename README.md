@@ -92,3 +92,15 @@ weiqifa@bsp-ubuntu1804:~/c/globalmem$
 
 
 ```
+
+# 使用lseek操作文件位置
+```
+weiqifa@bsp-ubuntu1804:~/c/globalmem$ gcc app-main.c && ./a.out
+file ret:0
+write data ok! fd:3
+str:123456789ABCDEF10111213141516171819201617181920
+lseek:1
+str:23456789ABCDEF10111213141516171819201617181920
+weiqifa@bsp-ubuntu1804:~/c/globalmem$
+
+```
