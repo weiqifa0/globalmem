@@ -1,3 +1,5 @@
+# 最新文章在 【嵌入式Linux】 微信公众号
+
 # globalmem
 
 看 linux 设备驱动开发详解时，字符设备驱动一章，注册globalmem驱动时，出现如下错误：
