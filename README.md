@@ -49,7 +49,9 @@ weiqifa@bsp-ubuntu1804:~/c/globalmem$
 ```
 
 # 通过代码来读写设备文件
+```
 weiqifa@bsp-ubuntu1804:~/c/globalmem$ gcc app-main.c && ./a.out
 str:LINUX,GDB
 weiqifa@bsp-ubuntu1804:~/c/globalmem$
+```
 
